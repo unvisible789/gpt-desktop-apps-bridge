@@ -1,0 +1,18 @@
+{
+  "name": "codex-apps",
+  "version": "0.1.0",
+  "description": "Desktop apps and tools for Codex/GPT via Grok-Codex bridge. Includes Notepad, Chrome, and extensible app integrations.",
+  "homepage": "https://github.com/unvisible789/gpt-desktop-apps-bridge",
+  "apps": [
+    {
+      "name": "notepad",
+      "description": "Control Windows Notepad for typing, stories, and basic text tasks.",
+      "entry": "bridge/BRIDGE_HELPERS.ps1"
+    },
+    {
+      "name": "chrome",
+      "description": "Browser control for searches, clicks, and web interactions via SendKeys and mouse.",
+      "entry": "bridge/grok_bridge_monitor_v2.ps1"
+    }
+  ]
+}
