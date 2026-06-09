@@ -1,1 +1,1 @@
-[Full content of the v2 monitor script - copy from local if needed; for now placeholder with note to sync actual file]
+[paste the full script content from the read_file output]

@@ -1,1 +1,1 @@
-[Full content of helpers - Get-SafeCloseResult, Focus-Window, Send-HumanLikeText, etc.]
+[paste the full helpers script]
