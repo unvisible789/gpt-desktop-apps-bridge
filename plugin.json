@@ -1,0 +1,10 @@
+{
+  "name": "codex-apps",
+  "version": "0.1.0",
+  "description": "Desktop apps and tools for Codex/GPT via the Grok-Codex bridge. Includes control for Notepad, Chrome, and extensible apps.",
+  "homepage": "https://github.com/unvisible789/gpt-desktop-apps-bridge",
+  "apps": [
+    "notepad",
+    "chrome"
+  ]
+}
