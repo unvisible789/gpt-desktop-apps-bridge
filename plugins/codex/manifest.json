@@ -1,0 +1,15 @@
+{
+  "name": "codex-desktop-apps",
+  "version": "0.1.0",
+  "description": "Custom desktop apps bridge for Codex/GPT control. Includes Notepad, Chrome, and extensible apps via Grok local agent.",
+  "apps": [
+    {
+      "name": "notepad",
+      "description": "Control Windows Notepad: open, type text, close gracefully."
+    },
+    {
+      "name": "chrome",
+      "description": "Control Google Chrome: open URLs, search, click, close."
+    }
+  ]
+}
