@@ -1,0 +1,5 @@
+{
+  "name": "gpt-desktop-apps-bridge",
+  "version": "0.1.0",
+  "description": "Bridge for adding custom desktop apps to Codex/GPT. Includes Notepad and Chrome control scripts."
+}
