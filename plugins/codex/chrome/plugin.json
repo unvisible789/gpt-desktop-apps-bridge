@@ -1,0 +1,7 @@
+{
+  "name": "chrome",
+  "version": "0.1.0",
+  "description": "Browser control for Chrome. Supports opening URLs, focusing windows, SendKeys, mouse clicks with context.",
+  "skills": ["browser-control"],
+  "commands": ["chrome-open", "chrome-search", "chrome-click"]
+}

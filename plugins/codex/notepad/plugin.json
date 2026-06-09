@@ -1,0 +1,7 @@
+{
+  "name": "notepad",
+  "version": "0.1.0",
+  "description": "Control for Windows Notepad app. Supports opening new docs, typing text with human-like delays, graceful close with unsaved content detection.",
+  "skills": ["notepad-control"],
+  "commands": ["notepad-open", "notepad-type", "notepad-close"]
+}
