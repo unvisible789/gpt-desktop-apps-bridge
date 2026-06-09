@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "name": "gpt-desktop-apps-bridge",
+  "description": "Custom desktop apps for Codex via Grok bridge: Notepad, Chrome, and more for computer control.",
+  "plugins": [
+    {
+      "name": "notepad",
+      "version": "0.1.0",
+      "description": "Control Windows Notepad: open new doc, type text, close gracefully.",
+      "repository": "unvisible789/gpt-desktop-apps-bridge",
+      "installType": "github",
+      "entry": "notepad",
+      "configSchema": ""
+    },
+    {
+      "name": "chrome",
+      "version": "0.1.0",
+      "description": "Control Chrome browser: open, search, click, close tabs/windows.",
+      "repository": "unvisible789/gpt-desktop-apps-bridge",
+      "installType": "github",
+      "entry": "chrome",
+      "configSchema": ""
+    }
+  ]
+}

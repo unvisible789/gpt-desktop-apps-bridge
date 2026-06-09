@@ -1,0 +1,7 @@
+{
+  "name": "chrome",
+  "version": "0.1.0",
+  "description": "Control Google Chrome from Codex using the bridge. Supports open URL, focus, SendKeys, mouse clicks, close.",
+  "skills": ["browser-control"],
+  "apps": ["chrome"]
+}

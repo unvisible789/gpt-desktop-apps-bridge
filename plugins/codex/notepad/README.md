@@ -1,13 +1,12 @@
-# Notepad Plugin
+# Notepad App for Codex
 
-For use with Grok-Codex bridge.
+Control Windows Notepad via Grok-Codex bridge.
 
-## Usage
-
+## Actions
 - Open new document
-- Type story or text
-- Close gracefully
+- Type text (human-like)
+- Close gracefully (detect unsaved)
 
-See bridge/BRIDGE_HELPERS.ps1 for implementation.
+See bridge/BRIDGE_HELPERS.ps1 for helpers.
 
-Install via marketplace and trust for hooks.
+Install this plugin from the marketplace.

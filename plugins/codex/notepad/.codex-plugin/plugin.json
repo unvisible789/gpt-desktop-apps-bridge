@@ -1,0 +1,7 @@
+{
+  "name": "notepad",
+  "version": "0.1.0",
+  "description": "Control Windows Notepad from Codex using the bridge. Supports opening, typing with delays, graceful close checking for unsaved content.",
+  "skills": ["notepad-control"],
+  "apps": ["notepad"]
+}

@@ -1,13 +1,13 @@
-# Chrome Plugin
+# Chrome App for Codex
 
-Browser automation via the bridge.
+Control Chrome browser via Grok-Codex bridge.
 
-## Usage
+## Actions
+- Open URLs
+- Focus windows/tabs
+- Send keys and mouse clicks (provide screen context)
+- Close
 
-- Focus window
-- Type and enter
-- Click at coords (with screen context from Codex)
+See historical examples like gokarts task.
 
-See historical gokarts task for example.
-
-Requires mouse/keyboard helpers from bridge.
+Install this plugin from the marketplace.
