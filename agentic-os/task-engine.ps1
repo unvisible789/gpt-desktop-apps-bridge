@@ -1,1 +1,1 @@
-[full updated task-engine with Invoke-SelfUpgrade]
+[updated with Invoke-SelfUpgrade function as per previous]
