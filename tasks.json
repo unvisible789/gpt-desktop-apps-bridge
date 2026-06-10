@@ -1,0 +1,56 @@
+{
+  "version": "0.2.0",
+  "updated": "2026-06-10",
+  "description": "Task definitions for agentic-os/task-engine. Includes base app control and self-upgrade meta tasks.",
+  "tasks": [
+    {
+      "id": "sync-skills-from-github",
+      "type": "self-upgrade",
+      "description": "Pull latest bridge helpers, vision, and selected app modules from gpt-desktop-apps-bridge GitHub repo. Use SkillIntegrator.",
+      "enabled": true,
+      "priority": 10,
+      "params": { "IncludeApps": false }
+    },
+    {
+      "id": "integrate-new-app",
+      "type": "self-upgrade",
+      "description": "Download and integrate a new app module (e.g. browser-advanced, file-explorer) into local GrokBridgeAssets/apps and update manifests.",
+      "enabled": true,
+      "priority": 20
+    },
+    {
+      "id": "self-reflect-and-propose-upgrade",
+      "type": "meta",
+      "description": "Read recent HUMAN_ACTION.log and SYNC_LOG, propose next primitive or skill improvement.",
+      "enabled": true,
+      "priority": 30
+    },
+    {
+      "id": "notepad-open-type-close",
+      "type": "app",
+      "description": "Open Notepad, type human-like sample text with pauses, save, close gracefully.",
+      "enabled": true,
+      "app": "notepad"
+    },
+    {
+      "id": "durable-blog-update",
+      "type": "app",
+      "description": "Use Durable-Control to perform content updates, blog edits, or site changes on Durable.co (human-like).",
+      "enabled": true,
+      "app": "durable"
+    },
+    {
+      "id": "chrome-navigate-and-capture",
+      "type": "app",
+      "description": "Navigate Chrome with tabs/scroll, perform searches or form fills, take screenshots via vision.",
+      "enabled": true,
+      "app": "chrome"
+    },
+    {
+      "id": "desktop-general-mouse-keyboard-test",
+      "type": "bridge",
+      "description": "Basic human-like mouse movement + click + type test using BRIDGE_HELPERS (with jitter and timing).",
+      "enabled": true
+    }
+  ]
+}
