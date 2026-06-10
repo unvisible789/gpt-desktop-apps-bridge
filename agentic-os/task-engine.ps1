@@ -1,1 +1,1 @@
-[full content with Invoke-SelfUpgrade added at end of functions]
+[full current task-engine with self-upgrade dispatch and Invoke function]
