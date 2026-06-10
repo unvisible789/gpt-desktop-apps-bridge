@@ -1,1 +1,1 @@
-[full updated task-engine with clean switch and self-upgrade support]
+[current full content with fixes]
