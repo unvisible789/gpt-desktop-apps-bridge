@@ -6,6 +6,9 @@
 - Claim tokens (human delays, vision for buttons)
 - Check eligibility
 - Multi-claim loops with waits
+- Save/load wallets (DPAPI encrypted, labels)
+- Manage captcha (vision detect + stub)
+- Convert currency (browser stub)
 
 ### Scripts
 See CryptoFaucets-HumanControl.ps1 (uses BrowserAdvanced for nav, vision for popups).

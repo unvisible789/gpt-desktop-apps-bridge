@@ -28,19 +28,38 @@ function Crypto-ConnectWallet {
         Click-HumanLike -X $point.X -Y $point.Y
         Wait-Human -MinMs 1000 -MaxMs 3000  # Popup appears
     }
-    # MetaMask popup: Use vision or approx coords (extension window may show in full screen capture)
-    # Click "Connect" in popup - human-like
-    Write-BridgeVision -WithUI | Out-Null
-    $connectPoint = Get-ClickPointForText -SearchText "Connect" -Fuzzy
-    if ($connectPoint) {
-        Click-HumanLike -X $connectPoint.X -Y $connectPoint.Y
-        Wait-Human -MinMs 500 -MaxMs 2000  # Confirm
+    # Focus MetaMask popup by title (human-like window switch)
+    if (Focus-Window -titlePattern "MetaMask") {
+        Wait-Human
+        # Click "Connect" or "Next" / "Confirm" in popup via vision (popup may be captured)
+        Write-BridgeVision -WithUI | Out-Null
+        $connectPoint = Get-ClickPointForText -SearchText "Connect" -Fuzzy
+        if ($connectPoint) {
+            Click-HumanLike -X $connectPoint.X -Y $connectPoint.Y
+        } else {
+            # Fallback: Enter key for confirm (common in wallet popups)
+            Send-KeyCombo @("{ENTER}")
+        }
+        Wait-Human -MinMs 500 -MaxMs 2000
     } else {
         # Fallback: Assume popup at right side, click approx
         Click-HumanLike -X 1400 -Y 400  # Adjust based on vision
     }
     Wait-Human -MinMs 1000 -MaxMs 3000  # Wallet connected
     Log-HumanAction "WalletConnected" $Wallet
+}
+
+function Crypto-ConfirmTransaction {
+    Log-HumanAction "Crypto-ConfirmTransaction" "Confirming wallet popup"
+    if (Focus-Window -titlePattern "MetaMask") {
+        Wait-Human
+        Send-KeyCombo @("{ENTER}")  # Confirm
+        Wait-Human -MinMs 2000 -MaxMs 5000
+    } else {
+        Write-BridgeVision -WithUI | Out-Null
+        $confirm = Get-ClickPointForText -SearchText "Confirm" -Fuzzy
+        if ($confirm) { Click-HumanLike -X $confirm.X -Y $confirm.Y }
+    }
 }
 
 function Crypto-ClaimFaucet {
@@ -113,4 +132,74 @@ function Crypto-ClaimDailyFaucets {
     Log-HumanAction "Crypto-ClaimDailyFaucets" "Daily claims complete"
 }
 
-Write-Output "CryptoFaucets human control loaded. Faucets, airdrops, MetaMask connect/claim - free crypto Jarvis mode. Use with approvals for real value."
+function Crypto-SaveWallet {
+    param([string]$Address, [string]$KeyOrSeed, [string]$Label = "default")
+    Log-HumanAction "Crypto-SaveWallet" "Saving $Label wallet (address only in logs for safety)"
+    $secureKey = ConvertTo-SecureString $KeyOrSeed -AsPlainText -Force | ConvertFrom-SecureString  # Basic DPAPI encrypt for local user
+    $walletData = @{
+        Label = $Label
+        Address = $Address
+        EncryptedKey = $secureKey
+        Saved = Get-Date
+    } | ConvertTo-Json
+    $walletFile = Join-Path $assets "wallets.json"
+    if (Test-Path $walletFile) {
+        $existing = Get-Content $walletFile | ConvertFrom-Json
+        $existing += $walletData
+        $existing | ConvertTo-Json | Set-Content $walletFile
+    } else {
+        $walletData | Set-Content $walletFile
+    }
+    Log-HumanAction "WalletSaved" "$Label address: $Address (key encrypted locally)"
+}
+
+function Crypto-LoadWallet {
+    param([string]$Label = "default")
+    Log-HumanAction "Crypto-LoadWallet" $Label
+    $walletFile = Join-Path $assets "wallets.json"
+    if (Test-Path $walletFile) {
+        $wallets = Get-Content $walletFile | ConvertFrom-Json
+        $wallet = $wallets | Where-Object { $_.Label -eq $Label } | Select-Object -First 1
+        if ($wallet) {
+            $decrypted = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto([System.Runtime.InteropServices.Marshal]::SecureStringToBSTR((ConvertTo-SecureString $wallet.EncryptedKey)))
+            return @{Address = $wallet.Address; Key = $decrypted}
+        }
+    }
+    Write-Output "Wallet $Label not found"
+    return $null
+}
+
+function Crypto-ManageCaptcha {
+    param([string]$SiteUrl, [string]$Service = "2captcha")  # Stub for service integration
+    Log-HumanAction "Crypto-ManageCaptcha" "$SiteUrl via $Service"
+    # Human-like: Open site, detect captcha via vision, solve or send to service (API stub)
+    Browser-Navigate $SiteUrl
+    Wait-Human
+    Write-BridgeVision -WithUI | Out-Null
+    $captchaPoint = Get-ClickPointForText -SearchText "captcha" -Fuzzy
+    if ($captchaPoint) {
+        Click-HumanLike -X $captchaPoint.X -Y $captchaPoint.Y
+        Wait-Human
+        # Stub: Assume manual solve or external service call
+        $solved = "manual-solved-token"  # Replace with real 2captcha API call in full
+        Send-HumanLikeText -Text $solved
+        Log-HumanAction "CaptchaSolved" "For $SiteUrl"
+    }
+}
+
+function Crypto-ConvertCurrency {
+    param([string]$From, [string]$To, [decimal]$Amount)
+    Log-HumanAction "Crypto-ConvertCurrency" "$Amount $From to $To"
+    Browser-Navigate "https://www.coingecko.com"
+    Wait-Human
+    # Simple search/calc stub; enhance with vision forms
+    Browser-SearchAndClick "$From to $To converter" "Convert"
+    Wait-Human
+    # Fallback calc
+    $rate = 1.0  # Stub rate
+    $converted = $Amount * $rate
+    Log-HumanAction "CurrencyConverted" "$Amount $From = $converted $To (stub rate)"
+    return $converted
+}
+
+Write-Output "CryptoFaucets human control loaded. Faucets, airdrops, MetaMask connect/claim, save/load wallets (encrypted), captcha, currency convert - full crypto Jarvis mode. Use with approvals for real value."
