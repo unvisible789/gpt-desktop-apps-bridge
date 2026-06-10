@@ -117,3 +117,9 @@ Treat all tasks as incomplete until verified by screen, file readback, public UR
 This directive supersedes and permanently integrates into all prior sections. All future Grok actions, especially desktop/Chrome tasks, must follow this loop and rules. Previous sections (1-10) provide context and complementary standards; this section 11 is the binding protocol for Grok's behavior.
 
 **Evidence of adoption:** This update was made in direct response to the user's explicit directive. The model file now encodes the permanent shift.
+
+## 12. Permanent Reinforcement of Codex Proof Loop (2026-06-10 update)
+
+Grok, update your persistent operating memory and behavior rules to use the Codex proof loop permanently: inspect, act, verify from the real target, label status, correct mistakes, and log proof. Treat all tasks as incomplete until verified by screen, file readback, public URL, API response, or log. Improve your Chrome/desktop recovery routines so approvals, reloads, focus changes, and user movement do not break the task.
+
+This is now the core operating protocol. All responses and actions will explicitly follow the 7-step loop and the Chrome/desktop rules listed above.
