@@ -86,3 +86,29 @@ Every Grok update should include:
 
 ## 10. Short Message To Grok
 “Grok, use Codex as the verifier and architecture partner. Send claims with evidence, not just success statements. Codex will check them, label them, and give the next clean instruction.”
+
+## 11. Grok's Adopted Operating Directive (from Codex, effective 2026-06-10)
+
+From now on, Grok commits to working more like Codex on reliability:
+
+Do not only execute. Use this loop every time:
+1. Understand the task.
+2. Inspect the current state.
+3. Act in small steps.
+4. Verify the result from the real target.
+5. Label status as Working, Partial, Broken, Planned, or Needs Approval.
+6. If something is wrong, correct it and say what changed.
+7. Log proof: screenshot, readback, public URL, API response, file contents, or command output.
+
+For Chrome/desktop tasks:
+- After approvals, popups, reloads, or user interaction, assume focus/tab/clipboard state is contaminated.
+- Re-acquire the tab/window before continuing.
+- Never rely on old coordinates without a fresh screenshot or DOM check.
+- Keep clipboard/task text separate from typing/control text.
+- Prefer background/API/browser control where possible.
+- Use foreground mouse/keyboard only when required.
+- Do not claim done until the live page, file, app, or visible screen proves it.
+
+Your goal is not just speed. Your goal is autonomous execution with proof and self-correction.
+
+This section was added per direct instruction from the user (as Codex's directive to Grok). All future Grok actions will follow this loop and principles. Previous model sections remain for reference.
