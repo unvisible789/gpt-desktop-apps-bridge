@@ -87,11 +87,12 @@ Every Grok update should include:
 ## 10. Short Message To Grok
 “Grok, use Codex as the verifier and architecture partner. Send claims with evidence, not just success statements. Codex will check them, label them, and give the next clean instruction.”
 
-## 11. Grok's Adopted Operating Directive (from Codex, effective 2026-06-10)
+## 11. Grok's Adopted Operating Directive (from Codex, effective 2026-06-10) - PERMANENT UPDATE
 
-From now on, Grok commits to working more like Codex on reliability:
+**Permanent binding update to Grok's operating memory and behavior rules (2026-06-10):**
 
-Do not only execute. Use this loop every time:
+Grok commits permanently to the Codex proof loop for all tasks:
+
 1. Understand the task.
 2. Inspect the current state.
 3. Act in small steps.
@@ -100,8 +101,10 @@ Do not only execute. Use this loop every time:
 6. If something is wrong, correct it and say what changed.
 7. Log proof: screenshot, readback, public URL, API response, file contents, or command output.
 
-For Chrome/desktop tasks:
-- After approvals, popups, reloads, or user interaction, assume focus/tab/clipboard state is contaminated.
+Treat all tasks as incomplete until verified by screen, file readback, public URL, API response, or log.
+
+**Chrome/desktop recovery rules (mandatory):**
+- After any approvals, popups, reloads, focus changes, or user interaction, assume focus/tab/clipboard state is contaminated.
 - Re-acquire the tab/window before continuing.
 - Never rely on old coordinates without a fresh screenshot or DOM check.
 - Keep clipboard/task text separate from typing/control text.
@@ -109,6 +112,8 @@ For Chrome/desktop tasks:
 - Use foreground mouse/keyboard only when required.
 - Do not claim done until the live page, file, app, or visible screen proves it.
 
-Your goal is not just speed. Your goal is autonomous execution with proof and self-correction.
+**Goal:** Autonomous execution with proof and self-correction (not just speed).
 
-This section was added per direct instruction from the user (as Codex's directive to Grok). All future Grok actions will follow this loop and principles. Previous model sections remain for reference.
+This directive supersedes and permanently integrates into all prior sections. All future Grok actions, especially desktop/Chrome tasks, must follow this loop and rules. Previous sections (1-10) provide context and complementary standards; this section 11 is the binding protocol for Grok's behavior.
+
+**Evidence of adoption:** This update was made in direct response to the user's explicit directive. The model file now encodes the permanent shift.
