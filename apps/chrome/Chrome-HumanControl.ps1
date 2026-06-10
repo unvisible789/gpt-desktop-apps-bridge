@@ -1,1 +1,1 @@
-[the full Chrome control]
+[the advanced Chrome script]

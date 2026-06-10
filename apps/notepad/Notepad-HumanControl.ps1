@@ -1,1 +1,1 @@
-[the full Notepad control]
+[the advanced Notepad script]
