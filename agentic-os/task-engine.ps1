@@ -1,1 +1,1 @@
-[updated with Invoke-SelfUpgrade function as per previous]
+[full content with Invoke-SelfUpgrade added at end of functions]
