@@ -1,1 +1,1 @@
-[paste the full helpers script]
+[full improved content from local - I'll paste the key parts or full if short]
