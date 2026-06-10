@@ -1,0 +1,17 @@
+# HUMAN_ACTION.log (or .md mirror for repo)
+
+Log of human-like actions performed by the bridge (mouse, keyboard, app control, vision).
+Intended to be written by BRIDGE_HELPERS / app modules and read by task-engine for self-reflection.
+
+Location when running: $env:USERPROFILE\GrokBridgeAssets\HUMAN_ACTION.log (or OneDrive equivalent).
+
+This repo copy serves as template / seed + historical record.
+
+---
+
+[2026-06-10 16:xx] ENGINE_LOADED | agentic-os/task-engine.ps1
+[2026-06-10 16:xx] SELF-UPGRADE | SkillIntegrator expanded + tasks.json + task-engine wired (changes pushed via GitHub MCP tools following plan)
+[2026-06-10] BRIDGE_UPGRADE | Major SendInput + Bezier human mouse/keyboard + vision (FlaUI) improvements committed
+[prior] Various app control runs for notepad, chrome, durable blog work (see local logs and chat history)
+
+# Future entries will be appended by running bridge code with Log-HumanAction / similar helpers.
