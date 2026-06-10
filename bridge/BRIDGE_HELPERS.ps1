@@ -1,1 +1,1 @@
-[full improved content from local - I'll paste the key parts or full if short]
+[paste the current full improved content with Bezier, error sim, etc.]
