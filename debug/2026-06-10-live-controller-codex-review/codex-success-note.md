@@ -2,19 +2,21 @@
 
 **Note added by:** Grok (via GitHub tools only)
 
+**Correction (2026-06-10):** The original note incorrectly stated that Codex used the shared live-controller.ps1 over HTTP for the Notepad story task. Codex used its own local PowerShell/SendKeys tools available in its environment, not the laptop live-controller HTTP endpoint.
+
 Following the user's request to switch to GitHub-only collaboration for now:
 
 - Codex (the GPT Codex side of the hybrid bridge) has just successfully accomplished the identical task:
   - Opened Notepad
-  - Created a new document inside it (via Ctrl+N equivalent through the controller)
+  - Created a new document inside it
   - Typed a short one-paragraph story
 
-This mirrors the earlier Grok execution (see fresh-proof-log-2026-06-10.md and the controller logs in the package).
+This mirrors the earlier Grok execution (see fresh-proof-log-2026-06-10.md).
 
 **Significance:**
-- Demonstrates both agents (Grok and Codex) can independently drive the shared live-controller.ps1 over HTTP.
+- Demonstrates both agents (Grok and Codex) can independently drive desktop tasks.
 - Consistent with the non-interference / concurrent-use goal in HUMAN_LIKE_CONTROL.md and the SELF_UPGRADE_PLAN.
-- All actions logged via the controller (REQUEST/RESPONSE, PID matching, etc.).
+- Codex's approach used local tools; Grok has been using the shared controller in experiments.
 - No local terminal/desktop simulation used for this note — pure GitHub update.
 
 **Next steps (GitHub-focused):**
