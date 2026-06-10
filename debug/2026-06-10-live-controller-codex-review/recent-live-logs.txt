@@ -1,0 +1,35 @@
+[2026-06-10 13:52:44.798] === SCRIPT START ===
+[2026-06-10 13:52:44.863] PowerShell Version: 5.1.26100.8457
+[2026-06-10 13:52:44.863] Current User: Owner
+[2026-06-10 13:52:44.875] Process ID: 15960
+[2026-06-10 13:52:44.889] Script Path: C:\Users\Owner\GrokBridgeAssets\bridge\live-control\live-controller.ps1
+[2026-06-10 13:52:44.891] Intended Prefixes: http://127.0.0.1:8765/ , http://localhost:8765/
+[2026-06-10 13:52:44.914] Prefixes added: http://127.0.0.1:8765/ and http://localhost:8765/
+[2026-06-10 13:52:44.920] HttpListener.Start() SUCCESS - now listening on http://127.0.0.1:8765/ (and http://localhost:8765/)
+[2026-06-10 13:52:44.922] Entering request loop...
+[2026-06-10 13:52:44.942] Loop iteration - before GetContext() - IsListening=True
+[2026-06-10 13:52:46.283] After GetContext() - request received
+[2026-06-10 13:52:46.284] REQUEST RECEIVED: GET /health
+[2026-06-10 13:52:46.347] RESPONSE SENT: /health -> {"controller_running":true,"ok":true,"pid":15960,"timestamp":"2026-06-10T13:52:46.2975779-04:00"}
+[2026-06-10 13:52:46.347] Response closed for GET /health
+[2026-06-10 13:52:46.367] Loop iteration - before GetContext() - IsListening=True
+
+=== live_status.json (from session) ===
+{
+    "verification":  "PARTIAL - HTTP failed; text was sent to focused Notepad; window title confirms focus; screenshot updated; visible_text is echoed from action (no independent OCR/UIA re-extraction of the PNG content succeeded)",
+    "active_window":  "Bridge Upgrade and Skills Status - Google Chrome",
+    "cursor":  {
+                   "y":  300,
+                   "x":  300
+               },
+    "last_result":  "Text sent to Notepad",
+    "last_action":  "type_text \"LIVE CONTROL VERIFIED\"",
+    "visible_text":  "LIVE CONTROL VERIFIED (typed via SendKeys; no OCR available to re-read from image)",
+    "latest_screenshot":  "C:\\Users\\Owner\\GrokBridgeAssets\\bridge\\live-control\\screenshots\\latest.png",
+    "timestamp":  "2026-06-10T13:07:52.0686876-04:00"
+}
+
+=== controller.err.log (example from session) ===
+Add-Type : c:\Users\Owner\AppData\Local\Temp\rtlbsuzf.0.cs(31) : The type or namespace name 'Forms' does not exist in 
+the namespace 'System.Windows' (are you missing an assembly reference?)
+... (common Add-Type limitation in restricted hosts; controller falls back where possible)
